@@ -13,6 +13,11 @@ func main() {
 	log.SetPrefix("greetings: ")
 	log.SetFlags(0)
 
+	// The check for insufficient command-line arguments
+	if len(os.Args) < 2 {
+		log.Fatal("Usage: go run hello.go [name1] [name2] ... [nameN]")
+	}
+
 	// A slice of names.
 	names := os.Args[1:]
 
