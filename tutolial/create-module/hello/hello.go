@@ -3,6 +3,7 @@ package main
 import (
 	"fmt"
 	"log"
+	"os"
 
 	"example.com/greetings"
 )
@@ -13,7 +14,7 @@ func main() {
 	log.SetFlags(0)
 
 	// A slice of names.
-	names := []string{"Gladys", "Samantha", "Darrin"}
+	names := os.Args[1:]
 
 	// Request greeting messages for the names.
 	messages, err := greetings.Hellos(names)
