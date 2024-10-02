@@ -12,3 +12,7 @@ mysql:
 
 clean: down
 	docker volume rm mysql-project_mysql-data
+
+set-env:
+	export DBUSER=user
+	export DBPASS=password
